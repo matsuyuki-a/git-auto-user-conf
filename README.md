@@ -32,5 +32,5 @@ $ git-auto-user-conf example
 `git config --global user.useConfigOnly true` により, グローバルのユーザ設定がない場合にコミットを失敗させることができます. この設定がない場合, 環境変数の値を使用してコミットしてしまうのですが, この設定をすることにより `git-auto-user-conf` を実行し忘れた時に, 環境変数の値でコミットされる事故を防ぐことができます.
 
 ## ライセンス
-CC0
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.ja)
 

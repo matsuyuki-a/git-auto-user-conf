@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# git-auto-user-conf
+# licensed under CC0.
+# http://creativecommons.org/publicdomain/zero/1.0/deed
+
 if [ $# -ge 1 ]; then
   if [ ! -e .git ]; then
     echo "'.git' directory does not exist."
