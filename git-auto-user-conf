@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ $# -ge 1 ]; then
+  if [ ! -e .git ]; then
+    echo "'.git' directory does not exist."
+  elif [ `cat ./.git/config | grep "\[user\]"` ]; then
+    echo "[user] entry already exists."
+    echo "user.name: `git config --local user.name`"
+    echo "user.email: `git config --local user.email`"
+  else
+    cat $HOME/$1.gitconfig >> ./.git/config
+  fi
+else
+  echo "Usage: $0 configname (got $# argument(s))"
+  echo "available confignames:"
+  ls ~/*.gitconfig 2> /dev/null | sed 's/.gitconfig$//g' | sed 's/^.*\//  /g'
+fi
+
